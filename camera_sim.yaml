@@ -1,0 +1,30 @@
+# 仿真相机内参（用于 D4 真值图 / 仿真渲染图）
+# 与 ROS camera_info 同格式，便于核对。
+# 来源: 仿真环境导出的 camera_info（camera_name: rune_sim_camera）
+# ⚠️ 这是与真实相机(2362/2336, 标定 1358x1058)不同的相机，仿真图必须用这一套。
+image_width: 960
+image_height: 720
+camera_name: rune_sim_camera
+camera_matrix:
+  rows: 3
+  cols: 3
+  data: [869.1168824543144, 0.0, 480.0,
+         0.0, 869.1168824543144, 360.0,
+         0.0, 0.0, 1.0]
+distortion_model: plumb_bob
+distortion_coefficients:
+  rows: 1
+  cols: 5
+  data: [0.0, 0.0, 0.0, 0.0, 0.0]
+rectification_matrix:
+  rows: 3
+  cols: 3
+  data: [1.0, 0.0, 0.0,
+         0.0, 1.0, 0.0,
+         0.0, 0.0, 1.0]
+projection_matrix:
+  rows: 3
+  cols: 4
+  data: [869.1168824543144, 0.0, 480.0, 0.0,
+         0.0, 869.1168824543144, 360.0, 0.0,
+         0.0, 0.0, 1.0, 0.0]
